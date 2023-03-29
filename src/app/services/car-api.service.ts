@@ -8,7 +8,8 @@ import { ICar } from '../interfaces/car.ts';
   providedIn: 'root'
 })
 export class CarApiService {
-
-  constructor(_http) {
-    
-  }
+ constructor(_http:HttpClient)
+{
+  
+}
+}
