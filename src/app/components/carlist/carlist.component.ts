@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OnInit} from '@angular/core';
 import { CarApiService } from 'src/app/services/car-api.service';
 import { ICar, NewCar } from 'src/app/interfaces/car';
 
@@ -8,7 +9,10 @@ import { ICar, NewCar } from 'src/app/interfaces/car';
   templateUrl: './carlist.component.html',
   styleUrls: ['./carlist.component.css']
 })
-export class CarlistComponent {
+export class CarlistComponent implements OnInit {
+  carsData:ICar| any;
+  show !: boolean;
+  constructor(private _carAPIService: CarApiService){}
   ngOnInit() {
     this.getCars()
   }
