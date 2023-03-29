@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {_carApiService } from
 
 @Component({
   selector: 'app-car',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./car.component.css']
 })
 export class CarComponent {
-
+  deleteCar(carId:string) { 
+    this._carAPIService.delCarDetails(carId).subscribe(result =>
+      { 
+        console.log(result);
+      });
+  }
 }

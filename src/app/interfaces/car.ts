@@ -7,7 +7,7 @@ export interface ICar {
 }
 
 export class NewCar implements ICar{
-    _id:string;
+    _id !:string;
     make: string;
     model: string;
     year: string;
