@@ -30,7 +30,11 @@ export class CarlistComponent implements OnInit {
       { this.carsData = carsData}
     );
 
+    this.getCars() 
     return false;
+  }
+  refreshCars () {
+    this.getCars();
   }
 
 }
